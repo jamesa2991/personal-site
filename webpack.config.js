@@ -17,9 +17,9 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader"
-          }
-        ]
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -30,10 +30,14 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
           },
-          "sass-loader"
+          'sass-loader',
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader'],
       },
     ],
   },
@@ -48,11 +52,13 @@ module.exports = {
     port: 3000,
     publicPath: 'http://localhost:3000/',
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: "./src/index.html",
-    filename: "./index.html"
-  }),
-  new MiniCssExtractPlugin({
-    filename: "style.css"})
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: './index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
   ],
 };

@@ -15,14 +15,25 @@ body {
       height: 100%;
 
       .main-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex: 1;
-        background: red;
+        flex-direction: column;
         height: 100%;
+
+        .personal-image {
+          img {
+            width: 250px;
+            border-radius: 50%;
+          }
+        }
       }
+
       .main-content {
         height: 100%;
         flex: 1;
-        background: blue;
+        border: 1px solid;
         display: flex;
         flex-direction: column;
         align-items: center;

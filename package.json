@@ -1,7 +1,7 @@
 {
-  "name": "template-repo",
+  "name": "personal-site",
   "version": "1.0.0",
-  "description": "Jay React Template Repo",
+  "description": "Jay Allen Personal Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamesa2991/jay-basic-react-template"
+    "url": "https://github.com/jamesa2991/personal-site"
   },
   "author": "Jay Allen",
   "license": "ISC",

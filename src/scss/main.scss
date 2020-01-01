@@ -1,20 +1,32 @@
-.App {
-  font-family: arial;
+@import 'fonts.scss';
+
+body {
+  height: 100vh;
+  font-family: 'Kulim Park', sans-serif;
   display: flex;
   justify-content: center;
 
-  .app-title {
-    display: flex;
-    align-items: center;
-  }
+  #root {
+    width: 100%;
 
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .content {
+      display: flex;
+      width: 100%;
+      height: 100%;
 
-  .test {
-    width: percentage(5/7);
+      .main-info {
+        flex: 1;
+        background: red;
+        height: 100%;
+      }
+      .main-content {
+        height: 100%;
+        flex: 1;
+        background: blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }

@@ -12,9 +12,7 @@ window.DEBUG = {
 
 const App = () => (
   <Provider store={store}>
-    <div className="App">
-      <Main />
-    </div>
+    <Main />
   </Provider>
 );
 

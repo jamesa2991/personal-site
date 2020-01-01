@@ -5,7 +5,7 @@ export default function Main(props) {
   return (
     <div>
       <div className="app-title">
-        <h1> React Application </h1>
+        <h1> Jay Allen </h1>
       </div>
       <div className="main-content">
         <p> Welcome! </p>

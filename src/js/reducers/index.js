@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux-immutable'
-import help from './help'
+import { combineReducers } from 'redux-immutable';
+import location from './location';
 
 export default combineReducers({
-  help,
-})
+  location,
+});

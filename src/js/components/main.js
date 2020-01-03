@@ -3,9 +3,9 @@ import ImageAndSocials from '~/components/image-and-socials';
 import HeaderBar from '~/components/right-content/header';
 import RightContent from '~/containers/right-content';
 
-export default function Main(props) {
+export default function Main() {
   return (
-    <div className="content">
+    <React.Fragment>
       <div className="left">
         <ImageAndSocials />
       </div>
@@ -15,8 +15,6 @@ export default function Main(props) {
           <RightContent />
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
-
-Main.propTypes = {};

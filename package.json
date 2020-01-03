@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server -d",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "clean": "rm -rf dist/",
+    "rebuild":"npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
     "@svgr/webpack": "^5.0.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-root-import": "^6.4.1",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^1.0.1",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",

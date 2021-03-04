@@ -46,7 +46,9 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: ['*', '.js', '.jsx'] },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  },
   output: {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '/',
@@ -66,11 +68,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
-    new CopyWebpackPlugin([
-      {
-        from: './src/docs/jayCV.pdf',
-        to: './docs/jayCV.pdf',
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/docs/jayCV.pdf',
+          to: './docs/jayCV.pdf',
+        },
+      ],
+    }),
   ],
 };

@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server -d",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "clean": "rm -rf dist/",
+    "rebuild":"npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,24 +17,28 @@
   "author": "Jay Allen",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "prop-types": "^15.7.2",
-    "webpack-dev-server": "^3.8.0",
-    "html-loader": "^0.5.5",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.1.1",
-    "sass-loader": "^7.3.1",
-    "style-loader": "^0.23.1",
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@svgr/webpack": "^5.0.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-root-import": "^6.4.1",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^1.0.1",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
     "react": "^16.9.0",

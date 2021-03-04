@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/js/index.js',
@@ -17,9 +18,9 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader"
-          }
-        ]
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -30,10 +31,18 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
           },
-          "sass-loader"
+          'sass-loader',
         ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: ['file-loader'],
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
@@ -48,11 +57,20 @@ module.exports = {
     port: 3000,
     publicPath: 'http://localhost:3000/',
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: "./src/index.html",
-    filename: "./index.html"
-  }),
-  new MiniCssExtractPlugin({
-    filename: "style.css"})
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: './index.html',
+      favicon: './src/images/jay.jpg',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: './src/docs/jayCV.pdf',
+        to: './docs/jayCV.pdf',
+      },
+    ]),
   ],
 };

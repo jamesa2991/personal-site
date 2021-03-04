@@ -1,17 +1,20 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import ImageAndSocials from '~/components/image-and-socials';
+import HeaderBar from '~/components/right-content/header';
+import RightContent from '~/containers/right-content';
 
-export default function Main(props) {
+export default function Main() {
   return (
-    <div>
-      <div className="app-title">
-        <h1> React Application </h1>
+    <React.Fragment>
+      <div className="left">
+        <ImageAndSocials />
       </div>
-      <div className="main-content">
-        <p> Welcome! </p>
+      <div className="right">
+        <div className="right-content-wrapper">
+          <HeaderBar />
+          <RightContent />
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
-
-Main.propTypes = {};

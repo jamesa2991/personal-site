@@ -9,7 +9,9 @@ const ImageAndSocials = () => {
         <img src={jay} title="Me and my Wife!" />
       </div>
       <h1 className="name">Jay Allen</h1>
-      <h2 className="title">Web Developer</h2>
+      <h2 className="title">
+        Senior Software Engineer at <a href="https://www.actual-experience.com/">Actual Experience</a>
+      </h2>
       <Socials />
     </React.Fragment>
   );

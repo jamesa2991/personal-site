@@ -1,9 +1,9 @@
 import { Map } from 'immutable';
 import * as actionTypes from '~/constants/actionTypes/location';
-import { BIO } from '~/constants/location';
+import { HOME } from '~/constants/location';
 
 export const initialState = Map({
-  currentLocation: BIO,
+  currentLocation: HOME,
 });
 
 export default function Location(state = initialState, action) {

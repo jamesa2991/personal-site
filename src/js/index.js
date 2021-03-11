@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import Main from '~/components/main';
 import store from '~/store';
 import '../scss/main.scss';
@@ -12,7 +13,9 @@ window.DEBUG = {
 
 const App = () => (
   <Provider store={store}>
-    <Main />
+    <BrowserRouter>
+      <Main />
+    </BrowserRouter>
   </Provider>
 );
 

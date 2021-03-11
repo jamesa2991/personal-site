@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
-import HeaderItem from '~/components/right-content/header/header-item';
+import HeaderItem from '~/components/header/header-item';
 import { setCurrentLocation } from '~/actions/state/location';
-import { LOCATION_TITLE_MAP } from '~/constants/location';
+import { LOCATION_INFO } from '~/constants/location';
 
 function mapStateToProps(state, ownProps) {
   const currentLocation = state.getIn(['location', 'currentLocation']);
   return {
     location: ownProps.location,
-    title: LOCATION_TITLE_MAP[ownProps.location] || ownProps.location,
+    title: LOCATION_INFO[ownProps.location].title || ownProps.location,
+    currentLocation: ownProps.location === currentLocation,
   };
 }
 

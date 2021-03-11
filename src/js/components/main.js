@@ -1,20 +1,12 @@
 import React from 'react';
-import ImageAndSocials from '~/components/image-and-socials';
-import HeaderBar from '~/components/right-content/header';
-import RightContent from '~/containers/right-content';
+import Header from '~/components/header';
+import Body from '~/components/body';
 
 export default function Main() {
   return (
     <React.Fragment>
-      <div className="left">
-        <ImageAndSocials />
-      </div>
-      <div className="right">
-        <div className="right-content-wrapper">
-          <HeaderBar />
-          <RightContent />
-        </div>
-      </div>
+      <Header />
+      <Body />
     </React.Fragment>
   );
 }
